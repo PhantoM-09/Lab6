@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using Model;
+@model PhoneRecord
+
+
+@helper FormUpdateHelper(PhoneRecord phoneRecord)
+{
+    <form method="post" action="/Dict/AddSave/">
+        @Html.Hidden("Id", phoneRecord.Id);
+
+        @Html.Label("Фамилия: ");
+        @Html.TextBox("LastName", phoneRecord.LastName);
+
+        @Html.Label("Номер телефона: ");
+        @Html.TextBox("PhoneNumber", phoneRecord.PhoneNumber);
+
+        <input type="submit" value="Редактировать" />
+    </form>
+
+}

@@ -1,0 +1,20 @@
+﻿@using TelephoneDirectory.Helpers;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Model;
+@model PhoneRecord
+
+
+@section Header
+    {
+    <h3>Добавление новой записи</h3>
+}
+
+<div>
+    @Html.CreateAddForm()
+    @Html.ValidationMessageFor(model => model.LastName, "Введите фамилию")
+    @Html.ValidationMessageFor(model => model.PhoneNumber, "Введите номер телефона")
+</div>

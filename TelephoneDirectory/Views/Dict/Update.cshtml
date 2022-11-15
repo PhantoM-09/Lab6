@@ -1,0 +1,18 @@
+﻿@using TelephoneDirectory.Helpers;
+@using Model;
+@model PhoneRecord
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@section Header
+    {
+    <h3>Редактирование записи</h3>
+}
+<div>
+    @Html.CreateUpdateForm(Model)
+</div>
+
